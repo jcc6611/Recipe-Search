@@ -2,18 +2,7 @@ let apiKey, response, url;
 
 apiKey = config.APIKey;
 
-// url = `https://api.spoonacular.com/recipes/complexSearch?apiKey=${apiKey}&number=5&instructionsRequired=true&addRecipeInformation=true&addRecipeNutrition=true`;
-
-// fetch(url, {
-//   headers: {
-//     "Content-Type": "application/json",
-//   },
-// })
-//   .then((result) => result.json())
-//   .then((data) => {
-//     console.log(data);
-//   })
-//   .catch((e) => console.log(e));
+url = `https://api.spoonacular.com/recipes/complexSearch?apiKey=${apiKey}&number=5&instructionsRequired=true&addRecipeInformation=true&addRecipeNutrition=true`;
 
 /*
 Returns an object containing the filter
@@ -57,7 +46,46 @@ function changeURL(search) {
       break;
   }
   console.log(url);
+  changeDisplay(url);
   url = `https://api.spoonacular.com/recipes/complexSearch?apiKey=${apiKey}&number=5&instructionsRequired=true&addRecipeInformation=true&addRecipeNutrition=true`;
 }
 
+// function changeDisplay(url) {
+//   fetch(url, {
+//     headers: {
+//       "Content-Type": "application/json",
+//     },
+//   })
+//     .then((result) => result.json())
+//     .then((data) => {
+//       console.log(data);
+//       data.results.forEach((item) => {
+//         console.log(item.title);
+//         addToDisplay(item);
+//       });
+//     })
+//     .catch((e) => console.log(e));
+// }
+
+let data = {
+  title: [
+    "Bacon bits",
+    "chicken fingers",
+    "onion dip",
+    "french fries",
+    "burger king jr",
+  ],
+};
+
+function addToDisplay(item) {
+  console.log(item.title);
+  let html, newHtml, element;
+  html = '<div class="item-title"><h1 id="title">%title%</h1></div>';
+  newHtml = html.replace("%title%", item.title);
+  element = ".display-wrapper";
+  document.querySelector(element).insertAdjacentHTML("beforeend", newHtml);
+}
+
 document.getElementById("search-button").addEventListener("click", getSearch);
+
+addToDisplay(data);

@@ -46,3 +46,11 @@
   font-size: 1.45em;
 }
 /* End SearchBar */
+
+/* Start Display */
+.item-title {
+  margin: 2em;
+  border: solid black;
+}
+
+/* End Display */
