@@ -1,8 +1,4 @@
-let apiKey, response, url;
-
-apiKey = config.APIKey;
-
-url = `https://api.spoonacular.com/recipes/complexSearch?apiKey=${apiKey}&number=5&instructionsRequired=true&addRecipeInformation=true&addRecipeNutrition=true`;
+// author: Jason Cheung
 
 /*
 Returns an object containing the filter
@@ -10,13 +6,16 @@ and entry so URL can be
 manipulated
 */
 function getSearch() {
-  let search = {
+  let search, url, limit, apiKey;
+  apiKey = config.APIKey;
+  limit = 6;
+  url = `https://api.spoonacular.com/recipes/complexSearch?apiKey=${apiKey}&number=${limit}&instructionsRequired=true&addRecipeInformation=true&addRecipeNutrition=true`;
+  search = {
     filter: checkFilter(),
     entry: document.getElementById("search").value,
   };
   console.log(search);
-  changeURL(search);
-  //   return search;
+  changeURL(search, url, limit, apiKey);
 }
 
 // Gets the filter value
@@ -27,7 +26,7 @@ function checkFilter() {
 /* Alters URL to search spoonacular's API
    based on user input
 */
-function changeURL(search) {
+function changeURL(search, url, limit, apiKey) {
   let splitEntry;
   splitEntry = search.entry.split(" ");
   console.log(splitEntry);
@@ -39,7 +38,7 @@ function changeURL(search) {
       url += `&titleMatch=${search.entry}`;
       break;
     case "ingredients":
-      url = `https://api.spoonacular.com/recipes/findByIngredients?apiKey=${apiKey}&number=5&instructionsRequired=true&addRecipeInformation=true&addRecipeNutrition=true`;
+      url = `https://api.spoonacular.com/recipes/findByIngredients?apiKey=${apiKey}&number=${limit}&instructionsRequired=true&addRecipeInformation=true&addRecipeNutrition=true`;
       url += `&ingredients=${splitEntry}`;
       break;
     default:
@@ -47,48 +46,32 @@ function changeURL(search) {
   }
   console.log(url);
   changeDisplay(url);
-  url = `https://api.spoonacular.com/recipes/complexSearch?apiKey=${apiKey}&number=5&instructionsRequired=true&addRecipeInformation=true&addRecipeNutrition=true`;
+  url = `https://api.spoonacular.com/recipes/complexSearch?apiKey=${apiKey}&number=${limit}&instructionsRequired=true&addRecipeInformation=true&addRecipeNutrition=true`;
 }
 
-// function changeDisplay(url) {
-//   fetch(url, {
-//     headers: {
-//       "Content-Type": "application/json",
-//     },
-//   })
-//     .then((result) => result.json())
-//     .then((data) => {
-//       console.log(data);
-//       data.results.forEach((item) => {
-//         console.log(item.title);
-//         addToDisplay(item);
-//       });
-//     })
-//     .catch((e) => console.log(e));
-// }
-
-let data = {
-  title: [
-    "Bacon bits",
-    "chicken fingers",
-    "onion dip",
-    "french fries",
-    "burger king jr",
-  ],
-};
-
-function addToDisplay(item) {
-  let mealsEl, single_mealEl, titles;
-  mealsEl = document.getElementById("meals");
-  single_mealEl = document.getElementById("single-meal");
-  single_mealEl.innerHTML = "";
-  titles = item.title;
-  titles.forEach((el) => {
-    console.log(el);
-    mealsEl.innerHTML += `<div class="meal"><h2>${el}</h2></div>`;
-  });
+// Add API data to the recipes.html
+function changeDisplay(url) {
+  fetch(url, {
+    headers: {
+      "Content-Type": "application/json",
+    },
+  })
+    .then((result) => result.json())
+    .then((data) => {
+      console.log(data.results);
+      let mealsEl, single_mealEl, results;
+      mealsEl = document.getElementById("meals");
+      single_mealEl = document.getElementById("single-meal");
+      mealsEl.innerHTML = "";
+      results = data.results;
+      results.forEach((el) => {
+        console.log(el.title);
+        mealsEl.innerHTML += `<div class="meal"><h2>${el.title}</h2>
+        <img src="${el.image}" alt="${el.title}"/></div>`;
+      });
+    })
+    .catch((e) => console.log(e));
 }
 
+// Adds event listener to Search button
 document.getElementById("search-button").addEventListener("click", getSearch);
-
-addToDisplay(data);

@@ -1,3 +1,5 @@
+/* author: Jason Cheung */
+
 /* Start NavBar */
 .navbar {
   text-align: center;
@@ -50,6 +52,24 @@
 /* Start Display */
 .meals {
   text-align: center;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-top: 1em;
+}
+
+.meals img {
+  margin-top: 1em;
+  height: 12em;
+  width: 18em;
+}
+
+.meals h2 {
+  word-wrap: normal;
+}
+
+.bottom {
+  height: 2em;
+  width: 100%;
 }
 
 /* End Display */

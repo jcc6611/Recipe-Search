@@ -1,4 +1,6 @@
-**TODO: Fix display of titles
+**BUGS: When titles are of different
+amount of lines image gets displaced
+vertically
 
 Meal suggestion:
 - Search functionality
