@@ -1,0 +1,48 @@
+/* Start NavBar */
+.navbar {
+  text-align: center;
+  background-color: rgb(233, 221, 221);
+  border: solid lightblue;
+  margin-bottom: 1em;
+}
+
+.navbar a {
+  margin: 1em;
+  font-size: large;
+}
+/* End NavBar */
+
+.container-wrapper {
+  border: solid lightblue;
+  background-color: lightcyan;
+  padding-bottom: 4em;
+}
+
+/* Start Heading */
+.heading h1 {
+  text-align: center;
+  padding: 0.2em;
+  font-size: 4em;
+}
+/* End Heading */
+
+/* Start SearchBar */
+.wrapper {
+  text-align: center;
+  margin-right: 4em;
+}
+
+.search-bar input {
+  height: 2em;
+  width: 20em;
+}
+
+.wrapper select {
+  height: 2.4em;
+}
+
+.wrapper button {
+  position: absolute;
+  font-size: 1.45em;
+}
+/* End SearchBar */

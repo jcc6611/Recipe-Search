@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recipes</title>
+    <link rel="stylesheet" href="recipes.css" />
+  </head>
+  <body>
+    <!-- Start NavBar -->
+    <div class="docTop">
+      <div class="navbar" id="navbar">
+        <a class="active" href="#">Recipes</a>
+        <a href="#">Workout</a>
+        <a href="#">Meditation</a>
+        <a href="#">Calorie-Counter</a>
+      </div>
+    </div>
+    <!-- End NavBar -->
+
+    <div class="container-wrapper">
+      <!-- Start Heading -->
+      <div class="heading">
+        <h1>Recipes</h1>
+      </div>
+      <!-- End Heading -->
+
+      <!-- Start SearchBar -->
+      <div class="search-bar">
+        <div class="wrapper">
+          <!-- Start Filter -->
+          <select name="filter" id="filter">
+            <option value="query"></option>
+            <option value="title">Title</option>
+            <option value="ingredients">Ingredients</option>
+          </select>
+          <input type="text" name="search" id="search" />
+          <button type="submit" class="search-button" id="search-button">
+            Search
+          </button>
+        </div>
+      </div>
+      <!-- End SearchBar -->
+    </div>
+
+    <script type="text/javascript" src="../config.js"></script>
+    <script type="text/javascript" src="recipes.js"></script>
+  </body>
+</html>

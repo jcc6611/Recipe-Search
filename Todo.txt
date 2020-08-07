@@ -1,0 +1,34 @@
+Meal suggestion:
+- Search functionality
+- Recipe API
+
+Meal history:
+- Target weight
+- Calorie counter
+- Meal history, calorie counter history 
+  (visualization, database)
+
+Gym:
+- Workout planner section (todo-list style, save in database)
+- Click on workout to activate that workout's view 
+  (query database)
+- Timer
+- Workout History (database)
+
+Journal:
+- Notes style section (database)
+
+Meditation:
+- Timer
+- YouTube API for thanissaro? 
+- Sound for when timer is finished
+- Option for relaxing background music
+- Time tracker history (database, visualization)
+
+Login:
+- Register page
+- Login page (username, password, email)
+- User accounts
+
+Notifications:
+- Phone or desktop notifcation integration
