@@ -7,48 +7,46 @@
     <link rel="stylesheet" href="recipes.css" />
   </head>
   <body>
-    <!-- Start NavBar -->
-    <div class="docTop">
-      <div class="navbar" id="navbar">
-        <a class="active" href="#">Recipes</a>
-        <a href="#">Workout</a>
-        <a href="#">Meditation</a>
-        <a href="#">Calorie-Counter</a>
-      </div>
-    </div>
-    <!-- End NavBar -->
-
-    <div class="container-wrapper">
-      <!-- Start Heading -->
-      <div class="heading">
-        <h1>Recipes</h1>
-      </div>
-      <!-- End Heading -->
-
-      <!-- Start SearchBar -->
-      <div class="search-bar">
-        <div class="wrapper">
-          <!-- Start Filter -->
-          <select name="filter" id="filter">
-            <option value="query"></option>
-            <option value="title">Title</option>
-            <option value="ingredients">Ingredients</option>
-          </select>
-          <input type="text" name="search" id="search" />
-          <button type="submit" class="search-button" id="search-button">
-            Search
-          </button>
+    <div class="container">
+      <!-- Start NavBar -->
+      <div class="docTop">
+        <div class="navbar" id="navbar">
+          <a class="active" href="#">Recipes</a>
+          <a href="#">Workout</a>
+          <a href="#">Meditation</a>
+          <a href="#">Calorie-Counter</a>
         </div>
       </div>
-      <!-- End SearchBar -->
-    </div>
+      <!-- End NavBar -->
 
-    <div class="display-container" id="display-container">
-      <div class="display-wrapper" id="display-wrapper">
-        <!-- <div class="item-title">
-          <h1 id="title">%title%</h1>
-        </div> -->
+      <div class="container-wrapper">
+        <!-- Start Heading -->
+        <div class="heading">
+          <h1>Recipes</h1>
+        </div>
+        <!-- End Heading -->
+
+        <!-- Start SearchBar -->
+        <div class="search-bar">
+          <div class="wrapper">
+            <!-- Start Filter -->
+            <select name="filter" id="filter">
+              <option value="query"></option>
+              <option value="title">Title</option>
+              <option value="ingredients">Ingredients</option>
+            </select>
+            <input type="text" name="search" id="search" />
+            <button type="submit" class="search-button" id="search-button">
+              Search
+            </button>
+          </div>
+        </div>
+        <!-- End SearchBar -->
       </div>
+
+      <div id="result-heading"></div>
+      <div id="meals" class="meals"></div>
+      <div id="single-meal"></div>
     </div>
 
     <script type="text/javascript" src="../config.js"></script>

@@ -48,9 +48,8 @@
 /* End SearchBar */
 
 /* Start Display */
-.item-title {
-  margin: 2em;
-  border: solid black;
+.meals {
+  text-align: center;
 }
 
 /* End Display */

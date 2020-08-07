@@ -78,12 +78,15 @@ let data = {
 };
 
 function addToDisplay(item) {
-  console.log(item.title);
-  let html, newHtml, element;
-  html = '<div class="item-title"><h1 id="title">%title%</h1></div>';
-  newHtml = html.replace("%title%", item.title);
-  element = ".display-wrapper";
-  document.querySelector(element).insertAdjacentHTML("beforeend", newHtml);
+  let mealsEl, single_mealEl, titles;
+  mealsEl = document.getElementById("meals");
+  single_mealEl = document.getElementById("single-meal");
+  single_mealEl.innerHTML = "";
+  titles = item.title;
+  titles.forEach((el) => {
+    console.log(el);
+    mealsEl.innerHTML += `<div class="meal"><h2>${el}</h2></div>`;
+  });
 }
 
 document.getElementById("search-button").addEventListener("click", getSearch);
