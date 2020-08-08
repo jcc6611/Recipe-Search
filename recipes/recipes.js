@@ -86,16 +86,44 @@ function changeDisplay(url) {
    button is clicked
 */
 function getInfo(e) {
+  let parentEl, mealID, clicked;
+  clicked = e.target;
+  parentEl = clicked.parentNode;
   if (e.target !== e.currentTarget) {
-    if (e.target.tagName === "H3") {
-      let parentEl;
-      parentEl = e.target.parentNode;
-      console.log(parentEl.id);
-    } else if (e.target.className === "meal-info") {
-      console.log(e.target.id);
+    if (clicked.tagName === "H3") {
+      mealID = parentEl.id;
+      console.log(mealID);
+      searchByID(mealID);
+    } else if (clicked.className === "meal-info") {
+      mealID = clicked.id;
+      console.log(mealID);
+      searchByID(mealID);
     }
+
     e.stopPropagation();
   }
+}
+
+// Search for an individual recipe by ID
+function searchByID(mealID) {
+  let url, apiKey;
+  apiKey = config.APIKey;
+  url = `https://api.spoonacular.com/recipes/${mealID}/information?apiKey=${apiKey}&number=1&instructionsRequired=true&includeNutrition=true`;
+  displayModal(url);
+}
+
+// Get info from API by ID and display it in a modal
+function displayModal(url) {
+  fetch(url, {
+    headers: {
+      "Content-Type": "application/json",
+    },
+  })
+    .then((result) => result.json())
+    .then((data) => {
+      console.log(data);
+    })
+    .catch((e) => console.log(e));
 }
 
 // Search button event listener
