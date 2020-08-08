@@ -6,6 +6,7 @@
   background-color: rgb(233, 221, 221);
   border: solid lightblue;
   margin-bottom: 1em;
+  height: 1.6em;
 }
 
 .navbar a {
@@ -61,6 +62,7 @@
   margin-top: 1em;
   height: 12em;
   width: 18em;
+  border: solid gray;
 }
 
 .meals h2 {
