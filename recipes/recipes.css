@@ -53,20 +53,36 @@
 /* Start Display */
 .meals {
   text-align: center;
+  justify-content: center;
   display: grid;
+  position: relative;
   grid-template-columns: repeat(2, 1fr);
   margin-top: 1em;
 }
 
-.meals img {
-  margin-top: 1em;
-  height: 12em;
+.meal img {
+  height: 16em;
   width: 18em;
-  border: solid gray;
+  border: 2px solid gray;
 }
 
-.meals h2 {
-  word-wrap: normal;
+.meal h2 {
+  font-size: 1.2em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.meal-info {
+  width: 50%;
+  display: inline-block;
+  text-align: center;
+  border: solid rgb(175, 122, 122);
+  cursor: pointer;
+}
+
+.meal-info-wrapper {
+  height: 100%;
 }
 
 .bottom {

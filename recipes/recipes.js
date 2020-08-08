@@ -66,8 +66,16 @@ function changeDisplay(url) {
       results = data.results;
       results.forEach((el) => {
         console.log(el.title);
-        mealsEl.innerHTML += `<div class="meal"><h2>${el.title}</h2>
-        <img src="${el.image}" alt="${el.title}"/></div>`;
+        mealsEl.innerHTML += `
+        <div class="meal">
+        <h2>${el.title}</h2>
+        <img src="${el.image}" alt="${el.title}"/>
+        <div class="meal-info-wrapper">
+        <div class="meal-info">
+        <h3>Info</h3>
+        </div>
+        </div>
+        </div>`;
       });
     })
     .catch((e) => console.log(e));
