@@ -5,6 +5,9 @@ vertically
 **TODO: Add popup window for recipe
 info buttons. Event listeners
 
+**Improvement: Could have made INFO
+an HTML button instead of a div element
+
 Meal suggestion:
 - Search functionality
 - Recipe API

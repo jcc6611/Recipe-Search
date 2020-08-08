@@ -59,9 +59,8 @@ function changeDisplay(url) {
     .then((result) => result.json())
     .then((data) => {
       console.log(data.results);
-      let mealsEl, single_mealEl, results;
+      let mealsEl, results;
       mealsEl = document.getElementById("meals");
-      single_mealEl = document.getElementById("single-meal");
       mealsEl.innerHTML = "";
       results = data.results;
       results.forEach((el) => {
@@ -71,24 +70,32 @@ function changeDisplay(url) {
         <h2>${el.title}</h2>
         <img src="${el.image}" alt="${el.title}"/>
         <div class="meal-info-wrapper">
-        <div class="meal-info" id="meal-${el.id}">
+        <div class="meal-info" id="${el.id}">
         <h3>Info</h3>
         </div>
         </div>
         </div>`;
-        console.log(el.id);
+        // console.log(el.id);
       });
-      // mealsEl.addEventListener("click", (e) => {
-      //   const mealInfo = e.path.find((item) => {
-      //     console.log(item.classList);
-      //   });
-      // });
+      mealsEl.addEventListener("click", getInfo, false);
     })
     .catch((e) => console.log(e));
 }
 
-function getMealID() {
-  console.log("hello world");
+/* Gets ID of individual recipe when Info 
+   button is clicked
+*/
+function getInfo(e) {
+  if (e.target !== e.currentTarget) {
+    if (e.target.tagName === "H3") {
+      let parentEl;
+      parentEl = e.target.parentNode;
+      console.log(parentEl.id);
+    } else if (e.target.className === "meal-info") {
+      console.log(e.target.id);
+    }
+    e.stopPropagation();
+  }
 }
 
 // Search button event listener
