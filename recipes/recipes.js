@@ -71,15 +71,25 @@ function changeDisplay(url) {
         <h2>${el.title}</h2>
         <img src="${el.image}" alt="${el.title}"/>
         <div class="meal-info-wrapper">
-        <div class="meal-info">
+        <div class="meal-info" id="meal-${el.id}">
         <h3>Info</h3>
         </div>
         </div>
         </div>`;
+        console.log(el.id);
       });
+      // mealsEl.addEventListener("click", (e) => {
+      //   const mealInfo = e.path.find((item) => {
+      //     console.log(item.classList);
+      //   });
+      // });
     })
     .catch((e) => console.log(e));
 }
 
-// Adds event listener to Search button
+function getMealID() {
+  console.log("hello world");
+}
+
+// Search button event listener
 document.getElementById("search-button").addEventListener("click", getSearch);

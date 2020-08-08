@@ -2,6 +2,9 @@
 amount of lines image gets displaced
 vertically
 
+**TODO: Add popup window for recipe
+info buttons. Event listeners
+
 Meal suggestion:
 - Search functionality
 - Recipe API
