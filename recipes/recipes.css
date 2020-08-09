@@ -70,21 +70,25 @@
   font-size: 1.2em;
 }
 
-.meal-info {
-  width: 50%;
-  display: inline-block;
-  text-align: center;
-  border: solid rgb(175, 122, 122);
-  cursor: pointer;
-}
-
-.meal-info-wrapper {
-  height: 100%;
-}
-
 .bottom {
   height: 2em;
   width: 100%;
 }
 
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
 /* End Display */
+
+.meal-info {
+  background-color: rgb(233, 221, 221);
+  font-weight: 700;
+  margin-top: 1em;
+  text-align: center;
+  height: 4em;
+  width: 12em;
+  border: 3px solid rgb(97, 97, 221);
+}

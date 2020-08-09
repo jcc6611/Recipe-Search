@@ -5,8 +5,18 @@ vertically
 **TODO: Add popup window for recipe
 info buttons. Event listeners
 
-**Improvement: Could have made INFO
-an HTML button instead of a div element
+**Modal:
+Title
+Image
+Diets
+preparationMinutes
+readyInMinutes
+Instructions
+Ingredients
+Servings
+Nutrients
+Source URL
+
 
 Meal suggestion:
 - Search functionality

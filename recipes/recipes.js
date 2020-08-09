@@ -69,11 +69,7 @@ function changeDisplay(url) {
         <div class="meal">
         <h2>${el.title}</h2>
         <img src="${el.image}" alt="${el.title}"/>
-        <div class="meal-info-wrapper">
-        <div class="meal-info" id="${el.id}">
-        <h3>Info</h3>
-        </div>
-        </div>
+        <button class="meal-info" id="${el.id}">Info</button>
         </div>`;
         // console.log(el.id);
       });
@@ -85,16 +81,12 @@ function changeDisplay(url) {
 /* Gets ID of individual recipe when Info 
    button is clicked
 */
+
 function getInfo(e) {
   let parentEl, mealID, clicked;
   clicked = e.target;
-  parentEl = clicked.parentNode;
-  if (e.target !== e.currentTarget) {
-    if (clicked.tagName === "H3") {
-      mealID = parentEl.id;
-      console.log(mealID);
-      searchByID(mealID);
-    } else if (clicked.className === "meal-info") {
+  if (clicked !== e.currentTarget) {
+    if (clicked.className === "meal-info") {
       mealID = clicked.id;
       console.log(mealID);
       searchByID(mealID);
