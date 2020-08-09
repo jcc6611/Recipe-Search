@@ -2,8 +2,7 @@
 amount of lines image gets displaced
 vertically
 
-**TODO: Add popup window for recipe
-info buttons. Event listeners
+**BUGS: Every Modal has the same information
 
 **Make the enter key work for search
 
@@ -12,6 +11,7 @@ Title
 Image
 Diets
 preparationMinutes
+cooking minutes
 readyInMinutes
 Instructions
 Ingredients

@@ -120,7 +120,7 @@
   border-bottom: 1px solid black;
 }
 
-.modal-header .title {
+.modal-header .modal-title {
   font-size: 1.25rem;
   font-weight: bold;
 }
