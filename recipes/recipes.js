@@ -8,7 +8,7 @@ manipulated
 function getSearch() {
   let search, url, limit, apiKey;
   apiKey = config.APIKey;
-  limit = 6;
+  limit = 2;
   url = `https://api.spoonacular.com/recipes/complexSearch?apiKey=${apiKey}&number=${limit}&instructionsRequired=true&addRecipeInformation=true&addRecipeNutrition=true`;
   search = {
     filter: checkFilter(),
@@ -66,12 +66,11 @@ function changeDisplay(url) {
       results.forEach((el) => {
         console.log(el.title);
         mealsEl.innerHTML += `
-        <div class="meal">
+        <div class="meal" id="meal-${el.id}">
         <h2>${el.title}</h2>
         <img src="${el.image}" alt="${el.title}"/>
-        <button class="meal-info" id="${el.id}">Info</button>
+        <button data-modal-target="#modal" class="meal-info" id="${el.id}">Info</button>
         </div>`;
-        // console.log(el.id);
       });
       mealsEl.addEventListener("click", getInfo, false);
     })
@@ -81,9 +80,8 @@ function changeDisplay(url) {
 /* Gets ID of individual recipe when Info 
    button is clicked
 */
-
 function getInfo(e) {
-  let parentEl, mealID, clicked;
+  let mealID, clicked;
   clicked = e.target;
   if (clicked !== e.currentTarget) {
     if (clicked.className === "meal-info") {
@@ -101,11 +99,11 @@ function searchByID(mealID) {
   let url, apiKey;
   apiKey = config.APIKey;
   url = `https://api.spoonacular.com/recipes/${mealID}/information?apiKey=${apiKey}&number=1&instructionsRequired=true&includeNutrition=true`;
-  displayModal(url);
+  displayModal(url, mealID);
 }
 
 // Get info from API by ID and display it in a modal
-function displayModal(url) {
+function displayModal(url, mealID) {
   fetch(url, {
     headers: {
       "Content-Type": "application/json",
@@ -113,7 +111,33 @@ function displayModal(url) {
   })
     .then((result) => result.json())
     .then((data) => {
+      let mealsEl, openModalButtons, closeModalButtons, overlay, modal;
+      mealsEl = document.getElementById(`meal-${mealID}`);
+      console.log(mealsEl);
       console.log(data);
+      mealsEl.innerHTML += `
+      <div class="modal" id="modal">
+        <div class="modal-header">
+          <div class="title">${data.title}</div>
+          <button data-close-button class="close-button">&times;</button>
+        </div>
+        <div class="modal-body">${data.instructions}</div>
+      </div>
+      <div id="overlay"></div>
+      `;
+      openModalButtons = document.querySelectorAll("[data-model-target]");
+      closeModalButtons = document.querySelectorAll("[data-close-button]");
+      overlay = document.getElementById("overlay");
+      modal = document.getElementById("modal");
+      modal.classList.add("active");
+      overlay.classList.add("active");
+      closeModalButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          const theModal = button.closest(".modal");
+          theModal.classList.remove("active");
+          overlay.classList.remove("active");
+        });
+      });
     })
     .catch((e) => console.log(e));
 }

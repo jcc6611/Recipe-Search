@@ -5,6 +5,8 @@ vertically
 **TODO: Add popup window for recipe
 info buttons. Event listeners
 
+**Make the enter key work for search
+
 **Modal:
 Title
 Image
