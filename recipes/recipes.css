@@ -76,12 +76,6 @@
   width: 100%;
 }
 
-*,
-*::after,
-*::before {
-  box-sizing: border-box;
-}
-
 /* End Display */
 
 .meal-info {
@@ -136,6 +130,38 @@
 
 .modal-body {
   padding: 10px 15px;
+  height: 28rem;
+  overflow-y: auto;
+}
+
+.modal-body img {
+  margin-top: 2em;
+  height: 17em;
+  width: 28em;
+}
+
+.modal-body h2 {
+  text-decoration: underline;
+}
+
+.modal-body .instructions {
+  text-align: left;
+}
+
+.modal-body .instructions h2 {
+  text-align: center;
+}
+
+.modal-body .ingredients p {
+  text-align: left;
+}
+
+.modal-body .nutrition p {
+  text-align: left;
+}
+
+.modal-body .source {
+  margin-bottom: 4em;
 }
 
 #overlay {

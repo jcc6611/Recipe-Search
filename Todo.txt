@@ -2,22 +2,16 @@
 amount of lines image gets displaced
 vertically
 
-**BUGS: Every Modal has the same information
-
 **Make the enter key work for search
 
-**Modal:
-Title
-Image
-Diets
-preparationMinutes
-cooking minutes
-readyInMinutes
-Instructions
-Ingredients
-Servings
-Nutrients
-Source URL
+**Fix css for modal (clicking outside of it should exit)
+
+**Make an input button for the limit
+on the url
+
+**Error check (ex. undefined for preparation time etc.)
+
+**Comment the rest of the code
 
 
 Meal suggestion:
