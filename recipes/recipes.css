@@ -67,8 +67,8 @@
   border: 2px solid gray;
 }
 
-.meal h2 {
-  font-size: 1.2em;
+.meal .meal-title h2 {
+  font-size: 1.3rem;
 }
 
 .bottom {

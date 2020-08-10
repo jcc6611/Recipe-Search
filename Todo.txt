@@ -2,8 +2,6 @@
 amount of lines image gets displaced
 vertically
 
-**Make the enter key work for search
-
 **Fix css for modal (clicking outside of it should exit)
 
 **Make an input button for the limit
@@ -13,6 +11,8 @@ on the url
 
 **Comment the rest of the code
 
+**Ingredients filter is broken (API gives different data for
+this search, will need to parse completely differently)
 
 Meal suggestion:
 - Search functionality

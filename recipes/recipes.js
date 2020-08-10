@@ -67,7 +67,9 @@ function changeDisplay(url) {
         console.log(el.title);
         mealsEl.innerHTML += `
         <div class="meal" id="meal">
+          <div class="meal-title">
             <h2>${el.title}</h2>
+          </div>
             <div class="image-container">
               <img src="${el.image}" alt="${el.title}"/>
             </div>
@@ -199,3 +201,10 @@ function openModal(modal, overlay) {
 
 // Search button event listener
 document.getElementById("search-button").addEventListener("click", getSearch);
+
+//Event listener for enter key
+document.addEventListener("keypress", function (event) {
+  if (event.keyCode === 13 || event.which === 13) {
+    getSearch();
+  }
+});
