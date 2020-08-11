@@ -70,14 +70,9 @@
 .meal .meal-title h2 {
   font-size: 1.3rem;
 }
-
-.bottom {
-  height: 2em;
-  width: 100%;
-}
-
 /* End Display */
 
+/* Start Modal */
 .meal-info {
   background-color: rgb(233, 221, 221);
   font-weight: 700;
@@ -179,4 +174,10 @@
 #overlay.active {
   opacity: 1;
   pointer-events: all;
+}
+/* End Modal */
+
+.bottom {
+  height: 2em;
+  width: 100%;
 }
