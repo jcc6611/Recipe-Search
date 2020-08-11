@@ -1,0 +1,22 @@
+/* author: Jason Cheung */
+
+/* Start NavBar */
+.navbar {
+  text-align: center;
+  background-color: rgb(233, 221, 221);
+  border: solid lightblue;
+  margin-bottom: 1em;
+  height: 1.6em;
+}
+
+.navbar a {
+  margin: 1em;
+  font-size: large;
+}
+/* End NavBar */
+
+.container-wrapper {
+  border: solid lightblue;
+  background-color: lightcyan;
+  padding-bottom: 4em;
+}
