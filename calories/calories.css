@@ -15,8 +15,40 @@
 }
 /* End NavBar */
 
+/* Start Form */
 .container-wrapper {
+  text-align: center;
   border: solid lightblue;
   background-color: lightcyan;
   padding-bottom: 4em;
+  height: 25em;
 }
+
+.heading h1 {
+  text-align: center;
+  padding: 0.2em;
+  font-size: 4em;
+}
+
+/* Start SearchBar */
+.wrapper {
+  text-align: center;
+  margin-right: 4em;
+}
+
+.save-bar input {
+  height: 2em;
+  width: 20em;
+}
+
+.wrapper select {
+  height: 2.4em;
+}
+
+.wrapper button {
+  position: absolute;
+  font-size: 1.45em;
+  cursor: pointer;
+}
+
+/* End Form */
