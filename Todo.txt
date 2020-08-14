@@ -18,6 +18,9 @@ this search, will need to parse completely differently)
 **Update ReadMe
 
 Calorie Counter:
+**Add event listeners to each entry to
+remove them from display and total
+
 **Connect to MySQL database
 
 **Use an API for food nutrition 

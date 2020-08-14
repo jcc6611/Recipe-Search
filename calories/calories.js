@@ -33,9 +33,12 @@ let display = (function () {
       mealName: htmlSelectors.entryName.value,
       calories: htmlSelectors.entryValue.value,
     };
+    if (data.mealName !== "" && data.calories !== "") {
+      addToDisplay(data);
+    }
     htmlSelectors.entryName.value = "";
     htmlSelectors.entryValue.value = "";
-    addToDisplay(data);
+    htmlSelectors.entryName.focus();
   }
 
   // Adds all additonal entries to display
