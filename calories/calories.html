@@ -5,7 +5,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Recipes</title>
+    <title>Calorie-Counter</title>
     <link rel="stylesheet" href="calories.css" />
   </head>
 
@@ -16,7 +16,7 @@
         <div class="navbar" id="navbar">
           <a class="active" href="../recipes/recipes.html">Recipes</a>
           <a href="#">Calorie-Counter</a>
-          <a href="#">Workout</a>
+          <!-- <a href="#">Workout</a> -->
           <!-- <a href="#">Meditation</a> -->
         </div>
       </div>
@@ -28,21 +28,35 @@
         </div>
         <!-- End Heading -->
 
-        <!-- Start SaveBar -->
-        <div class="save-bar">
+        <!-- Start AddBar -->
+        <div class="add-meal-bar">
           <div class="wrapper">
-            <!-- Start Filter -->
-            <select name="filter" id="filter">
-              <option value="Calories">Calories</option>
-              <!-- <option value="Food">Food</option> -->
-            </select>
-            <input type="text" name="save-entry" id="save-entry" />
-            <button type="submit" class="save-button" id="save-button">
-              Save
+            <label for="add-meal-name">Meal Name:</label>
+            <input type="text" name="add-meal-name" id="add-meal-name" />
+            <label for="add-meal-calories">Calories:</label>
+            <input
+              type="text"
+              name="add-meal-calories"
+              id="add-meal-calories"
+            />
+            <button type="submit" class="add-button" id="add-button">
+              Add
             </button>
           </div>
         </div>
-        <!-- End SearchBar -->
+        <!-- End AddBar -->
+      </div>
+      <!-- Start Display -->
+      <div id="total" class="total">
+        <h1 id="total">Total: 0 calories</h1>
+      </div>
+      <div id="entries" class="entries"></div>
+      <div class="bottom"></div>
+      <!-- End Display -->
+      <div class="submit" id="submit">
+        <button type="submit" class="submit-button" id="submit-button">
+          Submit
+        </button>
       </div>
     </div>
 

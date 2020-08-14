@@ -49,6 +49,10 @@
   font-size: 1.45em;
   cursor: pointer;
 }
+
+.filter {
+  cursor: pointer;
+}
 /* End SearchBar */
 
 /* Start Display */
@@ -74,6 +78,7 @@
 
 /* Start Modal */
 .meal-info {
+  cursor: pointer;
   background-color: rgb(233, 221, 221);
   font-weight: 700;
   margin-top: 1em;

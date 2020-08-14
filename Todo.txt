@@ -1,3 +1,4 @@
+Recipe Search:
 **BUGS: When titles are of different
 amount of lines image gets displaced
 vertically
@@ -14,9 +15,7 @@ on the url
 **Ingredients filter is broken (API gives different data for
 this search, will need to parse completely differently)
 
-Meal suggestion:
-- Search functionality
-- Recipe API
+**Update ReadMe
 
 Meal history:
 - Target weight
