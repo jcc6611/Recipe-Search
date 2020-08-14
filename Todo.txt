@@ -17,6 +17,12 @@ this search, will need to parse completely differently)
 
 **Update ReadMe
 
+Calorie Counter:
+**Connect to MySQL database
+
+**Use an API for food nutrition 
+suggestions (Calories, protein, sugar, fat, etc.) after the meal name is entered
+
 Meal history:
 - Target weight
 - Calorie counter
