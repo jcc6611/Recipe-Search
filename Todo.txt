@@ -18,19 +18,13 @@ this search, will need to parse completely differently)
 **Update ReadMe
 
 Calorie Counter:
-**Add event listeners to each entry to
-remove them from display and total
-
 **Connect to MySQL database
 
-**Use an API for food nutrition 
-suggestions (Calories, protein, sugar, fat, etc.) after the meal name is entered
+**Add graph visualization of nutrition history
 
-Meal history:
-- Target weight
-- Calorie counter
-- Meal history, calorie counter history 
-  (visualization, database)
+**Add textInputFields for each utrition 
+category and add the recommended html from 
+the API data
 
 Gym:
 - Workout planner section (todo-list style, save in database)
