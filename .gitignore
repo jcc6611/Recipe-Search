@@ -2,3 +2,7 @@ config.js
 script.js
 script.css
 testing.js
+app.js
+package.json
+package-lock.json
+node_modules
