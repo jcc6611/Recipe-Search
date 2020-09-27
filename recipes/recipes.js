@@ -8,7 +8,7 @@ manipulated
 function getSearch() {
   let search, url, limit, apiKey;
   apiKey = config.RecipesAPIKey;
-  limit = 4;
+  limit = 10;
   url = `https://api.spoonacular.com/recipes/complexSearch?apiKey=${apiKey}&number=${limit}&instructionsRequired=true&addRecipeInformation=true&addRecipeNutrition=true`;
   search = {
     filter: checkFilter(),
